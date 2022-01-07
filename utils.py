@@ -20,9 +20,10 @@ def store_in_file(filename, data):
         json.dump(data, file)
 
 def get_driver():
-    chrome_options = Options()
-    chrome_options.add_experimental_option("detach", True)
-    return webdriver.Chrome(chrome_options=chrome_options, service=Service(ChromeDriverManager().install()))
+    # chrome_options = Options()
+    # chrome_options.add_experimental_option("detach", True)
+    # return webdriver.Chrome(chrome_options=chrome_options, service=Service(ChromeDriverManager().install()))
+    return webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
 def get_file(filename):
     return open(filename)
